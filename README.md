@@ -15,6 +15,10 @@ It helps detect common subtitle issues such as:
 - quotation mark issues
 - glossary inconsistencies
 
+## Live app
+
+Try SubCheck here: [SubCheck on Streamlit](https://subcheck.streamlit.app/)
+
 ## Features
 
 - Upload `.srt` files
