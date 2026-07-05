@@ -455,14 +455,27 @@ with st.sidebar:
     )
 
     with st.expander("Glossary CSV format"):
-        st.write("Your glossary file should have these columns:")
+        st.write("Required columns: `correct`, `wrong`, `note`")
 
-        st.code(
-            """correct,wrong,note
-    Yukio,Yuki,Character name
-    Erdé,Erde,Organization name
-    Tetsuo Yabusame,Tetsuo Yabusami,Character name""",
-            language="csv",
+        example_glossary = pd.DataFrame(
+            [
+                {
+                    "correct": "Yukio",
+                    "wrong": "Yuki",
+                    "note": "Character name",
+                },
+                {
+                    "correct": "Erdé",
+                    "wrong": "Erde",
+                    "note": "Organization name",
+                },
+            ]
+        )
+
+        st.dataframe(
+            example_glossary,
+            use_container_width=True,
+            hide_index=True,
         )
 
 uploaded_file = st.file_uploader("Upload an SRT file", type=["srt"])
