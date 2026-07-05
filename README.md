@@ -34,9 +34,7 @@ correct,wrong,note
 Yukio,Yuki,Character name
 Erdé,Erde,Organization name
 Tetsuo Yabusame,Tetsuo Yabusami,Character name
-Run locally
-pip install -r requirements.txt
-streamlit run app.py
+```
 
 ## Example files
 
@@ -44,3 +42,10 @@ You can use the files in the `examples/` folder to test the app:
 
 - `examples/test_subcheck.srt` — sample subtitle file with intentional QA issues
 - `examples/glossary.csv` — sample glossary for terminology checks
+
+## Run locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
