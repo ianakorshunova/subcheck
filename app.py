@@ -453,24 +453,20 @@ with st.sidebar:
         type=["csv"],
         help="CSV columns: correct, wrong, note",
     )
-
+    
     with st.expander("Glossary CSV format"):
-        st.write("Required columns: `correct`, `wrong`, `note`")
+        st.markdown("Required columns: `correct`, `wrong`, `note`")
 
-        example_glossary = pd.DataFrame(
-            [
-                {
-                    "correct": "Yukio",
-                    "wrong": "Yuki",
-                    "note": "Character name",
-                },
-                {
-                    "correct": "Erdé",
-                    "wrong": "Erde",
-                    "note": "Organization name",
-                },
-            ]
+        st.markdown(
+            """
+            Example:
+
+            `Yukio` → `Yuki`  
+            `Erdé` → `Erde`
+            """
         )
+
+        st.caption("The app searches for the wrong term and suggests the correct one.")
 
         st.dataframe(
             example_glossary,
