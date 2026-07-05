@@ -467,13 +467,7 @@ with st.sidebar:
         )
 
         st.caption("The app searches for the wrong term and suggests the correct one.")
-
-        st.dataframe(
-            example_glossary,
-            use_container_width=True,
-            hide_index=True,
-        )
-
+        
 uploaded_file = st.file_uploader("Upload an SRT file", type=["srt"])
 
 if uploaded_file is None:
